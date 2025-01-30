@@ -280,3 +280,66 @@ footer {
     color: var(--text-light);
     font-size: 0.9rem;
 }
+.modal::backdrop{
+    background: #191C1FCC;
+}
+.modal {
+    position: fixed;
+    top: 160px;
+    left: 508px;
+    transform: translate(-50%, -50%);
+    background: #212529;
+    padding: 40px 28px;border-radius: 2px;
+    width: 80%;
+    max-width: 400px;
+    height: 300px;
+    border: 2px solid #4C6EF5;
+    z-index: 10001;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.modal-header h2{
+    font-size: 32px;
+    color: #F8F9FA;
+}
+.close{
+    background: #343A40;
+    border-radius: 4px;
+    border: none;
+    color: #ADB5BD;
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+}
+.modal p{
+    font-size: 16px;
+    color: #ADB5BD;
+    margin-bottom: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+#email{
+    width: 100%;
+    background-color: #191C1F;
+    height: 40px;
+    border: 1px solid #191C1F;
+    margin-bottom: 30px;
+}
+#email::placeholder{
+    padding-left: 10px;
+    font-size: 16px;
+}
+.submit{
+    height: 44px;
+    width: 100%;
+    border: 1px solid #4C6EF5;
+    background-color: #4C6EF5;
+    color: #F8F9FA;
+    font-size: 16px;
+}
