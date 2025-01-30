@@ -62,6 +62,9 @@ header {
 }
 
 .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -80,7 +83,7 @@ header {
     font-size: 1.2rem;
     margin-bottom: 20px;
     width: 689px;
-    margin-left: 100px;
+
 }
 
 .bnr-button {
@@ -140,8 +143,6 @@ header {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -278,8 +279,8 @@ footer {
     padding: 20px;
     text-align: center;
     color: var(--text-light);
-    font-size: 0.9rem;
 }
+
 .modal::backdrop{
     background: #191C1FCC;
 }
@@ -295,6 +296,7 @@ footer {
     height: 300px;
     border: 2px solid #4C6EF5;
     z-index: 10001;
+    overflow-y: hidden;
 }
 
 .modal-header{
@@ -342,4 +344,277 @@ form{
     background-color: #4C6EF5;
     color: #F8F9FA;
     font-size: 16px;
+}
+@media (min-width: 1024px) and (max-width: 1120px) {
+    .banner-content h1 {
+        font-size: clamp(2.5rem, 3vw, 3rem);
+    }
+    .banner-content p {
+        font-size: clamp(1rem, 1.5vw, 1.2rem); 
+        margin-left: 50px; 
+        width: 100%;
+    }
+    
+    .about-content h2 {
+        font-size: clamp(2rem, 2.5vw, 2.5rem); 
+    }
+
+    .about-content p {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+    .faq-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .faq-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+    .faq-left h2 {
+        font-size: clamp(2rem, 2.5vw, 2.5rem);
+    }
+
+    .faq-left p {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+    .faq-button {
+        width: 100%;
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+    .faq-right h3 {
+        font-size: clamp(1.5rem, 2vw, 2rem);
+    }
+    .faq-right p {
+        font-size: clamp(1rem, 1.2vw, 1.2rem);
+    }
+    .comments-section{
+        width: 100%;
+    }
+    .comments-box h2 {
+        font-size: clamp(2rem, 2.5vw, 2.5rem);
+    }
+    .comments-box p {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+    .comment-item p {
+        font-size: clamp(1rem, 1.5vw, 1.1rem);
+    }
+    .comment-author h3 {
+        font-size: clamp(1.4rem, 1.8vw, 1.5rem);
+    }
+    .comment-author p {
+        font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    }
+    footer{
+        width: 100%;
+    }
+}
+/* Responsividade para telas de 768px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .banner-section{
+        width: 100%;
+    }
+    .banner-content{
+        width: 100%;
+    }
+    .banner-content h1 {
+        font-size: clamp(2rem, 3.5vw, 3.2rem)
+    }
+    .banner-content p {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-content h2 {
+        font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+    }
+
+    .about-content p {
+        font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    }
+    .faq-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .faq-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+    .faq-left h2 {
+        font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+    }
+
+    .faq-left p {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+    .faq-button {
+        width: 100%;
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+    .faq-right h3 {
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+    }
+    .faq-right p {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+    .comments-section{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .comments-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .comments-box{
+        order: 1;
+        width: 100%;
+        position: static;
+    }
+    .comments-list{
+        order: 2;
+    }
+    .comments-box h2 {
+        font-size: clamp(2rem, 2.5vw, 2.5rem);
+    }
+
+    .comments-box p {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+    .comment-item p {
+        font-size: clamp(1rem, 1.5vw, 1.1rem);
+    }
+    .comment-author h3 {
+        font-size: clamp(1.3rem, 1.8vw, 1.5rem);
+    }
+    .comment-author p {
+        font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    }
+    footer{
+        width: 100%;
+    }
+
+}
+
+/* Responsividade para telas de 425px */
+@media (min-width: 425px) and (max-width: 767px) {
+    .hdr-button{
+        display: none;
+    }
+    .banner-section{
+        width: 100%;
+    }
+    .banner-content{
+        width: 100%;
+    }
+    .banner-content h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+    .banner-content p {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+        width: 100%;
+    }
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-content h2 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    .about-content p {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+    .faq-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .faq-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+    .faq-left h2 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+
+    .faq-left p {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+    .faq-button {
+        width: 100%;
+        font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+    .faq-right h3 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+    .faq-right p {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+    .comments-section{
+        display: flex;
+        align-items: center;
+    }
+    .comments-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+    .comments-box{
+        order: 1;
+        width: 100%;
+        position: static;
+    }
+    .comments-list{
+        order: 2;
+    }
+    .comment-item{
+        display: flex;
+        flex-direction: column;
+    }
+    .comment-author{
+        display: flex;
+        align-items: center;
+    }
+    .comment-author p{
+        margin-left: -70px;
+    }
+    .comments-box h2 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+
+    .comments-box p {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+    .comment-item p {
+        font-size: clamp(1rem, 3vw, 1.1rem);
+    }
+    .comment-author h3 {
+        font-size: clamp(1.3rem, 3vw, 1.5rem);
+    }
+    .comment-author p {
+        font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    }
+    footer{
+        width: 100%;
+    }
 }
