@@ -287,11 +287,11 @@ footer {
 .modal {
     position: fixed;
     top: 160px;
-    left: 508px;
+    left: 50%;
     transform: translate(-50%, -50%);
     background: #212529;
     padding: 40px 28px;border-radius: 2px;
-    width: 80%;
+    width: 100%;
     max-width: 400px;
     height: 300px;
     border: 2px solid #4C6EF5;
@@ -505,7 +505,6 @@ form{
     footer{
         width: 100%;
     }
-
 }
 
 /* Responsividade para telas de 425px */
@@ -617,4 +616,24 @@ form{
     footer{
         width: 100%;
     }
+    .modal{
+        width: 70%; 
+      }
+      .modal-header{
+        font-size: clamp(0.75rem, 3vw, 0.875rem); 
+    }
+    .modal-header h2{
+        font-size: clamp(1rem, 3vw, 2rem); 
+    }
+    .close{
+        font-size: clamp(0.875rem, 4vw, 1rem);
+    }
+    .modal p{
+        font-size: clamp(0.625rem, 3vw, 1rem); 
+    }
+    .email, .submit{
+        font-size: clamp(12px, 4vw, 14px);
+        width: 100%;
+    }
+
 }
